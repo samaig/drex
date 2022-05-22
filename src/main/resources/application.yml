@@ -1,0 +1,35 @@
+database:
+  url: r2dbc:mysql://${DB_HOST}:${DB_PORT}/${DB_NAME}
+
+spring:
+  application:
+    name: drex
+  config:
+    location: classpath:/*.properties
+  r2dbc:
+    url: ${database.url}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+  flyway:
+    enabled: true
+    locations:
+      - classpath:/db/migration
+    url: jdbc:mysql://${DB_HOST}:${DB_PORT}/${DB_NAME}
+    user: ${DB_USER}
+    password: ${DB_PASSWORD}
+    installed-by: ${USER}
+    validate-on-migrate: true
+
+build:
+  version: @project.version@
+
+provider:
+  nytimes:
+    url: https://api.nytimes.com
+
+server:
+  port: ${SERVER_PORT}
+
+logging:
+  level:
+    org.springframework.r2dbc: ERROR
