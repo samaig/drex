@@ -20,12 +20,18 @@ spring:
     installed-by: ${USER}
     validate-on-migrate: true
 
-build:
-  version: @project.version@
-
 provider:
   nytimes:
     url: https://api.nytimes.com
+
+http:
+  web:
+    client:
+      timeout:
+        connect: 5000
+        read: 5000
+        write: 5000
+        response: 5000
 
 logging:
   level:
