@@ -27,9 +27,6 @@ provider:
   nytimes:
     url: https://api.nytimes.com
 
-server:
-  port: ${SERVER_PORT}
-
 logging:
   level:
     org.springframework.r2dbc: ERROR
