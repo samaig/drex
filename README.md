@@ -1,7 +1,9 @@
-# Drex (NY Times Data Api)
+# Drex (Java Reactive Spring boot API example app)
 
-Drex is a Java reactive spring boot application that allows you to query the New York Times data api.
+Drex is an example java reactive application for accessing and exposing apis. In this example, I'm using the New York Times Developer API
 from [New York Times Developer API.](https://developer.nytimes.com/apis)
+
+You can clone or fork this repository and modify it to your requirements.
 
 ## Setup & Installation
 mysql db - (you can use any db of your choice)
