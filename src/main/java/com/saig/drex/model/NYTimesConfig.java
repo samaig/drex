@@ -1,13 +1,13 @@
 package com.saig.drex.model;
 
 import lombok.Builder;
-import lombok.Value;
+import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;
 
-import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
-@Value
+@Data
 @Builder
 @Table("nytimes_config")
 public class NYTimesConfig {
@@ -20,7 +20,7 @@ public class NYTimesConfig {
     String apiSecret;
     String status;
     String baseUrl;
-    Timestamp created;
-    Timestamp updated;
+    LocalDateTime created;
+    LocalDateTime updated;
 
 }

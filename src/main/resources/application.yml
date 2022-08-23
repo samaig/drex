@@ -33,6 +33,12 @@ http:
         write: 5000
         response: 5000
 
+app-config:
+  base-url: https://api.nytimes.com/svc
+  api-secret: ${API_SECRET}
+
 logging:
   level:
     org.springframework.r2dbc: ERROR
+server:
+  port: 8095

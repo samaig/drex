@@ -36,7 +36,7 @@ public class ConfigController {
 
     @PutMapping("/config/update")
     public Mono<NYTimesConfig> updateNYTimesConfig(@RequestBody NYTimesConfig nyTimesConfig) {
-        return configService.saveNYTimesConfig(nyTimesConfig);
+        return configService.updateNYTimesConfig(nyTimesConfig);
     }
 
     @DeleteMapping("/config/{appId}")

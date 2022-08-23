@@ -14,7 +14,7 @@ public enum TopStoriesSection {
     t_magazine("t-magazine"), travel("travel"), upshot("upshot"), us("us"), world("world");
 
     private final String section;
-    private static final String sectionExtension = ".json";
+    private static final String SECTION_TYPE = ".json";
     private static final Map<TopStoriesSection, String> sectionsMap = new HashMap<>();
 
     static {
@@ -32,6 +32,6 @@ public enum TopStoriesSection {
     }
 
     public String getSection() {
-        return section + sectionExtension;
+        return section + SECTION_TYPE;
     }
 }
