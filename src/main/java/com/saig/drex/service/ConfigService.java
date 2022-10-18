@@ -14,6 +14,7 @@ import java.time.ZoneId;
 public class ConfigService {
 
     private static final String UTC = "UTC";
+    private static final String ACTIVE_STATE = "Active";
 
     @Value("${app-config.base-url}")
     private final String baseUrl;
@@ -63,7 +64,7 @@ public class ConfigService {
 
     private NYTimesConfig buildNYTimesConfig(NYTimesConfig nyTimesConfig, boolean isUpdate) {
         nyTimesConfig.setApiSecret(apiSecret);
-        nyTimesConfig.setStatus(isUpdate ? nyTimesConfig.getStatus() : "Active");
+        nyTimesConfig.setStatus(isUpdate ? nyTimesConfig.getStatus() : ACTIVE_STATE);
         nyTimesConfig.setBaseUrl(baseUrl);
         nyTimesConfig.setUpdated(toTimesStamp());
 
